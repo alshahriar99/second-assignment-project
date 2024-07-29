@@ -1,9 +1,290 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
 .inter-fonts{
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
   }
+  @font-face{
+    font-family: miama-font;
+    src:url(../style/Miama.ttf)
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+}
+/* shared style */
+
+.btn-primary{
+  padding: 16px 40px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 42px;
+  background: rgb(230, 83, 60);
+  border: none;
+  color: white;
+  font-size:1.1rem;
+  font-weight: 600;
+  margin-right: 14px;
+}
+ /* navbar section style */
+ .header{
+  background-color: #191919;
+  max-width: 100%;
+  height: auto;
+}
+.nav-logo{
+  color: rgb(230, 83, 60);
+  font-size: 2.76rem;
+  font-weight: 800;
+} 
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 60px 0;
   
+}
+nav ul{
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 39px;
+  padding:4px;
+  
+}
+nav ul li{
+  list-style: none;
+  margin-right: 47px;
+ 
+}
+nav li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.12rem;
+  font-weight: 400;
+}
+#menu-icon{
+  font-size: 2.12rem;
+  color: #fff;
+  z-index: 10001;
+  display: none;
+}
+
+.nav-btn{
+  font-size: 1.12rem;
+  font-weight: 600;
+  padding: 8px 20px 8px 20px;
+  border-radius: 46px;
+  background-color: #E6533C;
+  border: none; 
+  color: white;
+}
+/* banner section style */
+
+.banner-container{
+  display: flex;
+  justify-content:center;
+  gap: 90px;
+  
+}
+.banner-contant{
+  width: 520px;
+  height: 440px;
+  margin-top: 52px;
+}
+.banner-title{
+  color: rgb(255, 255, 255);
+  font-size:4.87rem;
+  font-weight: 800;
+  line-height: 120%;
+  margin-top:0;
+  margin-bottom: 27px;
+}
+.design{
+  font-family: miama-font;
+  font-size: 10rem;
+  font-weight: 400; 
+}
+.banner-description{
+  width: 520px;
+  height: 48px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size:1rem;
+  font-weight: 400;
+}
+.download{
+  padding: 16px 40px;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 42px;
+  background: transparent;
+  color: white;
+  font-size:1.1rem;
+  font-weight: 600;
+  border: 1px solid white;
+}
+.banner-img img{
+  width: 349px;
+  height: 573px;
+  position: relative;
+}
+
+button#spical{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 206px;
+  height: 96px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(48, 48, 48, 0.54);
+  position: absolute;
+  margin-top: -170px;
+  margin-left: -100px;
+}
+.red-btn{
+  width: 40px;
+  height: 40px;
+  background: rgb(230, 83, 60);
+  border-radius: 50%;
+}
+ .btn-content .v-title{
+  color: rgb(250, 250, 249);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: left;
+  line-height: 33px; 
+}
+.btn-content .v-tutorial{
+  color: rgba(239, 237, 232, 0.65);
+  font-size:1rem;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+#spical-top{
+  position:absolute;
+  width: 193px;
+  height: 98px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: 220px;
+  margin-top: 110px;
+  z-index: 1;
+}
+.f-title{
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.f-discript{
+  color: rgba(255, 255, 255, 0.65);
+  font-size:0.81rem;
+  font-weight: 400;
+
+}
+.v-tutorial{
+  color: rgba(255, 255, 255, 0.65);
+  font-size:0.81rem;
+  font-weight: 400;
+}
+.hide{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:576px) {
+  /* navbar responsive start */
+  nav{ 
+    margin: 0 20px 0 20px ;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul{
+    position: absolute;
+    flex-direction: column;
+    top: 70px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    gap: 0;
+    border: none;
+  }
+ nav ul li {
+    display: none;  
+}
+  #menu-icon{
+  display: block;
+}
+/* navbar responsive ends*/
+  .banner-container{
+    flex-direction: column;
+    gap: 0;
+  }
+  .banner-contant{
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    padding-left: 30px;
+  }
+  .banner-title{
+    font-size: 2.25rem;
+  }
+  .design{
+    font-size: 4.5rem;
+  }
+  .banner-description{
+    width: 274px;
+    height: 96px;
+  }
+  .btn-primary , .download{
+    padding: 15px 20px;
+  }
+  .banner-img{
+    width: 353px;
+    height: 588px;
+   margin: 0 auto;
+   padding-left: 30px;
+  }
+  .banner-img img{
+    width: 100%;
+    height: auto;
+  }
+  #spical-top{
+    width: 156px;
+    height: 73px;
+    margin-left:175px ;
+    margin-top:40px;
+    border-radius: 8px;
+  }
+  .f-title{
+    font-size: 2rem;
+  }
+ button#spical{
+    width: 156px;
+    height: 73px;
+    gap: 5px;
+    margin-left:-50px ;
+    margin-top:-274px;
+    border-radius: 8px;
+  }
+
+}
+/*responsive banner parts ends */
